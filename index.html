@@ -159,7 +159,7 @@
  
             // Send the query to the Flask API
             try {
-                const response = await fetch("http://localhost:5693/search", {
+                const response = await fetch("https://samuel-dev.fun/querybot/search", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -225,7 +225,7 @@
             chatBody.scrollTop = chatBody.scrollHeight;
         }
         async function startSpeechToText() {
-            const response = await fetch("http://127.0.0.1:5693/speech-to-text", {
+            const response = await fetch("https://samuel-dev.fun/querybot/speech-to-text", {
                 method: "GET",
             });
             const data = await response.json();
